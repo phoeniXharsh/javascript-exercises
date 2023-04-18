@@ -1,9 +1,5 @@
-const removeFromArray = function(arr, value) {
-    let index = arr.indexOf(value);
-    if(index > -1){
-        arr.splice(index, 1);
-    }
-    return arr;
+const removeFromArray = function(arr, ...args) {
+    return arr.filter(item => !args.includes(item));
 };
 
 // Do not edit below this line
